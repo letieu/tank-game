@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        canvas{
+            border:1px solid black;
+            background-color: brown;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+    
+        }
+        #webcam-container{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            height: 400px;
+            z-index: 99999999;
+        }
+        #label-container{
+            z-index: 999999;
+            position: fixed;
+            right: 0;
+            top: 200px;
+        }
+        .link{
+            border:1px solid gray;
+            display: block;
+            background-color: cadetblue;
+            line-height: 50px;
+            width: 100px;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    <a class='link' href="https://letieu.github.io/minesweeper-game">Minesweeper</a>
+    <a class='link' href="https://letieu.github.io/fullstack4/projects/snake/">Snack</a>
+
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+    <canvas id="cv" width="600" height= "500"></canvas>
+</body>
+<script src="./src/tank.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+<script src="./src/ai.js"></script>
+
+</html>
